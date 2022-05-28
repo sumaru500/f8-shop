@@ -4,6 +4,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -39,6 +40,11 @@ html {
     font-weight: 500 !important;
 }
 
+/* Margins */
+.mr-8 {
+    margin-right: 8px;
+}
+
 /* Animation */
 @keyframes fadeIn {
     from {
@@ -48,4 +54,66 @@ html {
     to {
         opacity: 1;
     }
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal__body {
+    margin: auto;
+    position: relative;
+
+    /* to over the modal__overlay  */
+    z-index: 1;
+}
+
+/* Button style */
+.btn {
+    min-width: 142px;
+    height: 34px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0 12px ;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--size-s {
+    height: 32px !important;
+    font-size: 12px;
+    padding: 0 8px ;
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    color: #949494;
+    cursor: default;
+    background-color: #c3c3c3;
 }
