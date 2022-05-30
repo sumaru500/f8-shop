@@ -103,7 +103,7 @@ html {
 
 /* Button style */
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     background-color: var(--white-color);
     color: var(--black-color);
