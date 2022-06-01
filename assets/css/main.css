@@ -1232,4 +1232,76 @@ i.home-product-item__like-icon-fill {
 
 .home-product__pagination.pagination {
     margin: 48px 0 32px 0;
-} 
+}
+
+
+/* Footer */
+
+.footer {
+    border-top: 4px solid var(--primary-color);
+    padding-top: 16px;
+}
+.footer__heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.footer__list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer__link {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #737373;
+    padding: 2px 0;
+    font-weight: 300;
+    align-items: baseline;
+}
+
+.footer__link:hover {
+    color: var(--primary-color)
+}
+
+.footer__link-icon {
+    font-size: 1.6rem;
+    margin-right: 8px;
+}
+
+.footer__download {
+    display: flex;
+}
+
+.footer__download-img {
+    width: 80px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-app {
+   margin-left: 16px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.footer__download-app-link {
+    text-decoration: none;
+    color: transparent;
+}
+.footer__download-app-img {
+    height: 16px;
+}
+
+.footer__bottom {
+    margin-top: 32px;
+    padding: 10px 0;
+    background-color: #F5F5F5;
+}
+.footer__text {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
