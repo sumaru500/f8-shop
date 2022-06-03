@@ -44,9 +44,18 @@
         margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
     }
 
+    .app__content {
+        padding-top: 8px;
+    }
+
     /* Sort bar in header */
     .header__sort-bar {
         display: flex;
+    }
+
+    /* show navigator bar */
+    .mobile-category {
+        display: block;
     }
 
 }
@@ -75,9 +84,17 @@
         justify-content: space-between;
     }
 
+    .header__mobile-search {
+        display: block;
+    }
+
     .header__logo,
     .header__cart {
         width: unset;
+    }
+
+    .header__logo-img {
+        width: 100px;
     }
 
     .header__search-checkbox:checked ~ .header__search {
@@ -116,5 +133,20 @@
         box-shadow: 0 1px 2px rgb(0, 0, 0, 0.05);
     }
 
+    /* Pagination */
+    .pagination-item {
+        margin: 0 6px;
+    }
+
+    .pagination-item__link {
+        --height: 28px;
+        min-width: 36px;
+        font-size: 1.6rem;
+    }
+
+    /* correct margin for the app content */
+    .app__content {
+        margin: 0 4px;
+    }
 
 }

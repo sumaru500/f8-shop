@@ -1,3 +1,8 @@
+.app {
+    /* IMPORTANT: to trim the whole right whitespace in mobile devices  */
+    overflow: hidden;
+}
+
 /* header */
 .header {
     position: relative;
@@ -497,6 +502,7 @@
 
 /* search for mobile */
 .header__mobile-search {
+    display: none;
     padding: 0 12px;
 }
 
@@ -539,6 +545,8 @@
     display: inline-block;
     padding: 0 12px;
     cursor: pointer;
+    /* desactive hilight when press on mobile tablet */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-icon {
@@ -907,6 +915,7 @@
 }
 .header__sort-item--active .header__sort-link {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .header__sort-link {
     display: block;
@@ -1102,6 +1111,72 @@
 .home-filter__page-icon {
     margin: auto;
     color: #555;
+}
+
+
+/* Category Thumbnail Navigator  */
+.mobile-category {
+    display: none;
+}
+
+.mobile-category__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* set horizontal scroll bar */
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* hide the scroll bar */
+.mobile-category__list::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-category__item {
+    /* not allow wrapped in the inner html content */
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+/* set properties for each category item  */
+.mobile-category__item:nth-of-type(3n+1) .mobile-category__link {
+    background-color: #87AFD8;
+}
+.mobile-category__item:nth-of-type(3n+2) .mobile-category__link {
+    background-color: #76C9BD;
+}
+.mobile-category__item:nth-of-type(3n+3) .mobile-category__link {
+    background-color: #88CF81;
+}
+
+.mobile-category__link {
+    --line-height: 2rem;
+    padding: 0 6px;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+    /* to set width and height => must set display block */
+    width: 110px;
+    max-height: calc(var(--line-height)*2); /* must set also overflow: hidden */
+    line-height: var(--line-height);
+    overflow: hidden;
+    display: block;
+    /* to trim and add .. */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    border-radius: 4px;
+    /* prevent user select */
+    user-select: none;
+    -webkit-user-select: none;
+    /* desactive hilight when press on mobile tablet */
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Product item */
