@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="./assets/icon/fontawesome-6.1.1/css/all.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 <!-- Phan than -->
@@ -31,8 +33,8 @@
     <!-- <h1 style="color: red; font-size: 3rem"> CSS chao cac ban</h1> -->
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="navbar">
+            <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__item navbar__item--has-qr navbar__item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
@@ -162,7 +164,10 @@
                 </nav>
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -173,6 +178,10 @@
                             </svg>
                         </a>
                     </div>
+
+                    <!-- fake checkbox to show/hide header__search -->
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
                     <div class="header__search">
                         <div class="header__search-input-wrapper">
                             <input type="text" class="header__search-input" placeholder="Nhập tìm kiếm...">
@@ -216,7 +225,7 @@
                     <div class="header__cart">
                         <div class="header__cart-wrapper">
                             <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                            <span class="header__cart-notice">13</span>
+                            <span class="header__cart-notice">4</span>
                             <!--  header__cart-list--no-cart -->
                             <div class="header__cart-list">
                                 <img src="./assets/img/no_cart.png" alt="" class="header__cart-no-cart-img">
@@ -250,7 +259,7 @@
                                                     Phân loại: Bạc
                                                 </span>
                                                 <span class="header__cart-item-remove">
-                                                    Xóa
+                                                    <i class="fa-regular fa-trash-can"></i>
                                                 </span>
                                             </div>
                                         </div>
@@ -282,7 +291,7 @@
                                                     Phân loại: Bạc
                                                 </span>
                                                 <span class="header__cart-item-remove">
-                                                    Xóa
+                                                    <i class="fa-regular fa-trash-can"></i>
                                                 </span>
                                             </div>
                                         </div>
@@ -312,7 +321,7 @@
                                                     Phân loại: Bạc
                                                 </span>
                                                 <span class="header__cart-item-remove">
-                                                    Xóa
+                                                    <i class="fa-regular fa-trash-can"></i>
                                                 </span>
                                             </div>
                                         </div>
@@ -342,7 +351,7 @@
                                                     Phân loại: Bạc
                                                 </span>
                                                 <span class="header__cart-item-remove">
-                                                    Xóa
+                                                    <i class="fa-regular fa-trash-can"></i>
                                                 </span>
                                             </div>
                                         </div>
@@ -354,9 +363,23 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </header>
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app__content">
                     <div class="grid__col-2">
                         <!-- Left Navigation menu -->
@@ -387,7 +410,7 @@
                     <!-- Main content  -->
                     <div class="grid__col-10">
                         <!-- Home Sort + Filter -->
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -932,7 +955,7 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__col-2-4">
                         <h3 class="footer__heading">
@@ -1051,7 +1074,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2022 - Bản quyền thuộc về Công ty F8-Shop</p>
                 </div>
             </div>

@@ -9,7 +9,8 @@
 
     --navbar-height: 34px;
     --header-height: 120px;
-    --header-with-search-height: calc(var( --header-height) - var(--navbar-height))
+    --header-with-search-height: calc(var( --header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
 }
 
 * {
@@ -26,17 +27,6 @@ html {
 }
 
 /* Responsible */
-.grid {
-    width: 1200px;
-    max-width: 100%;
-    /* centering horizontal */
-    margin: 0 auto;
-}
-
-.grid__full-width {
-    width: 100%;
-}
-
 .grid__row {
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,120 @@
+/* Mobile & Tablet Devices */
+@media (max-width: 1023px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 68px;
+    }
+    /* hide on mobile & tablet */
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    /* cart list cover whole screen */
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px)/2);
+    }
+
+    /* bridge */
+    .header__cart-list::before { 
+        right: calc((100% - 644px)/2);
+    }
+
+    /* hide triangle */
+    .header__cart-list::after {
+        display: none;
+    }
+
+    /* Make bigger Delete icon in cart */
+    .header__cart-item-remove {
+        padding-left: 32px;
+    }
+
+    .header {
+       position: fixed;
+       top: 0;
+       right: 0;
+       left: 0;
+    }
+
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+
+    /* Sort bar in header */
+    .header__sort-bar {
+        display: flex;
+    }
+
+}
+/* Tablet Devices */
+@media (min-width: 740px) and (max-width: 1023px) {
+    /* hide on tablet */
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+        text-align: right;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 739px) {
+    /* hide on mobile */
+    .hide-on-mobile {
+        display: none;
+    }
+    
+    /* centering for header elements */
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header__logo,
+    .header__cart {
+        width: unset;
+    }
+
+    .header__search-checkbox:checked ~ .header__search {
+        display: flex;
+    }
+
+    .header__search {
+        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        height: 46px;
+        box-shadow: 0 1px 2px rgb(0, 0, 0, 0.05);
+        padding: 0 16px;
+        animation: mobileSearchSlideDown linear 0.3s;
+    }
+
+    @keyframes mobileSearchSlideDown {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height)/2);
+        }
+
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+
+    .header__search-history {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        width: 100%;
+        left: 0;
+        box-shadow: 0 1px 2px rgb(0, 0, 0, 0.05);
+    }
+
+
+}
