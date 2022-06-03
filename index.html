@@ -35,9 +35,20 @@
     <!-- <h1 style="color: red; font-size: 3rem"> CSS chao cac ban</h1> -->
     <div class="app">
         <header class="header">
-            <div class="grid wide">
-                <nav class="navbar hide-on-mobile-tablet">
-                    <ul class="navbar__list">
+            <div class="grid wide mobile-header-grid">
+                <!-- Navbar -->
+                <!-- Navbar icon on mobile tablet -->
+                <label for="mobile-navbar-checkbox" class="mobile-navbar-label">
+                    <i class="mobile-navbar-icon fa-solid fa-bars"></i>
+                </label>
+                <!-- overlay on mobile tablet -->
+                <input type="checkbox" hidden id="mobile-navbar-checkbox">
+                <label  for="mobile-navbar-checkbox" class="mobile-navbar-overlay"></label>
+                <nav class="navbar">
+                    <label for="mobile-navbar-checkbox" class="mobile-navbar-close">
+                        <i class="mobile-navbar-close-icon fa-regular fa-circle-xmark"></i>
+                    </label>
+                    <ul class="navbar__list hide-on-mobile-tablet">
                         <li class="navbar__item navbar__item--has-qr navbar__item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
                             <!-- Header QR Code -->
@@ -67,7 +78,7 @@
                         </li>
                     </ul>
 
-                    <ul class="navbar__list">
+                    <ul class="navbar__list show-on-mobile-tablet">
                         <li class="navbar__item navbar__item-has-notify">
                             <a href="" class="navbar__item-link">
                                 <i class="navbar__icon far fa-bell"></i>

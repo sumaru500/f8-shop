@@ -10,6 +10,48 @@
     height: var(--header-height);
     background-image: linear-gradient(0,#ff6533,#f53e2d);
 }
+/* navbar mobile tablet */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.mobile-navbar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.3);
+    /* z-index: 99; */
+    animation: fadeIn linear 0.3s; 
+}
+.mobile-navbar-checkbox {
+    display: block;
+}
+.mobile-navbar-label {
+    display: none;
+}
+.mobile-navbar-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
+
+.mobile-navbar-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.mobile-navbar-close-icon {
+    font-size: 2.6rem;
+    color: var(--text-color);
+}
 
 /* navbar */
 .navbar {
