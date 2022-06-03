@@ -61,6 +61,11 @@
 }
 /* Tablet Devices */
 @media (min-width: 740px) and (max-width: 1023px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 68px;
+    }
+
     /* hide on tablet */
     .hide-on-tablet {
         display: none;
@@ -74,6 +79,11 @@
 
 /* Mobile Devices */
 @media (max-width: 739px) {
+    :root {
+        --navbar-height: 0px;
+        --header-height: 54px;
+    }
+
     /* hide on mobile */
     .hide-on-mobile {
         display: none;
@@ -147,6 +157,22 @@
     /* correct margin for the app content */
     .app__content {
         margin: 0 4px;
+    }
+
+    /* customizations for mobile devices */
+    .footer__content {
+        padding: 0 16px;
+    }
+    .footer__heading {
+        text-align: center;
+    }
+    .footer__download,
+    .footer__link {
+        justify-content: center;
+    }
+    .footer__download-app-link {
+        display: block;
+        padding: 6px;
     }
 
 }
