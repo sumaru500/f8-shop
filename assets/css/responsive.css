@@ -22,6 +22,10 @@
         padding-left: 20px;
     }
 
+    .mobile-navbar-close {
+        display: block;
+    }
+    
     .header-with-search {
         flex: 1;
     }

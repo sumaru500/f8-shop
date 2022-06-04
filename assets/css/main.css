@@ -42,7 +42,7 @@
 }
 
 .mobile-navbar-close {
-    display: block;
+    display: none;
     position: absolute;
     top: 1rem;
     right: 1rem;
